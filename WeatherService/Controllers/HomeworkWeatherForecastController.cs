@@ -45,6 +45,11 @@ namespace WeatherService.Controllers
         }
 
         //TODO: Доработать ...
-
+        //удаляет показатель температуры в указанный промежуток времени
+        [HttpDelete("delete")]
+        public IActionResult Delete (DateTime date)
+        {
+            return Ok(_holder.Delete(date));
+        }
     }
 }
